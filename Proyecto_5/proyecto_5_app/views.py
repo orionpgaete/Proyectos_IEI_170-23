@@ -4,5 +4,13 @@ from . import forms
 
 def index(request):
     form = forms.registrousuario()
+    if request.method == 'POST':
+        form = forms.registrousuario(request.POST)
+        if form.is_valid():
+            print("FORMULARIO OK!!!")
+            print("Nombre: ", form.cleaned_data['nombre'])
+            print("Email: ", form.cleaned_data['email'])
+            print("Fono: ", form.cleaned_data['fono'])
+            
     data = {'forms': form}
     return render(request, 'index.html', data)
