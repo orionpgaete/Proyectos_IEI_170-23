@@ -31,9 +31,6 @@ class registrousuario(forms.Form):
             raise forms.ValidationError("El correo debe contener un @")
         return inputmail
 
-
-
-
     nombre.widget.attrs['class'] = 'form-control'
     fono.widget.attrs['class'] = 'form-control'
     email.widget.attrs['class'] = 'form-control'
