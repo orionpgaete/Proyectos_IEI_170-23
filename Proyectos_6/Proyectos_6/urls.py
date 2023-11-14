@@ -21,5 +21,8 @@ from proyecto_6_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
-    path('proyectos/', views.listadoProyecto)
+    path('proyectos/', views.listadoProyecto),
+    path('agregar/', views.agregarProyecto),
+    path('eliminar/<int:IN_id>', views.eliminarProyecto),
+    path('actualizar/<int:IN_id>', views.modificarProyecto),
 ]
